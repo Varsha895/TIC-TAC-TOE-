@@ -61,6 +61,15 @@ def player_choice(board):
     
     while position not in [1,2,3,4,5,6,7,8,9]: 
         position = int(input('Choose your next position: (1-9) '))
+        if(board[position]!=' '):
+            print('Already filled')
+            y=input('Do you want to continue [Y/N]')
+            y=y.lower()
+            if y=='y':
+                return True
+            else:
+                return False
+            return
         
         
     return position
